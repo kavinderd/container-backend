@@ -7,6 +7,8 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
+gem "rack-cors" , require: "rack/cors"
+
 gem 'pg'
 
 gem 'devise', '~>3.4.0'
@@ -29,6 +31,10 @@ gem 'rack-cors', require: 'rack/cors'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :production do
+  gem "puma"
+end
 
 group :development, :test do
   gem "rspec-rails"
