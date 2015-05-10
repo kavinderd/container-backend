@@ -3,7 +3,7 @@ class RegistrationsController < ApplicationController
   prepend_before_filter :require_no_authentication, only: :create
   include Devise::Controllers::Helpers
 
-  response_to :json
+  respond_to :json
 
   def create
     user = User.new(user_params)
